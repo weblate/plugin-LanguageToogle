@@ -1,0 +1,25 @@
+{
+  "name": "LanguageToogle",
+  "description": "Quickly change the language of Matomo",
+  "version": "0.1.0",
+  "theme": false,
+  "require": {
+    "piwik": ">=3.4.0,<4.0.0-b1"
+  },
+  "authors": [
+    {
+      "name": "Lukas Winkler",
+      "email": "lukas@matomo.org",
+      "homepage": "https://lw1.at"
+    }
+  ],
+  "support": {
+    "email": "lukas@matomo.org",
+    "issues": "https://github.com/Findus23/plugin-LanguageToogle/issues",
+    "forum": "https://forum.piwik.org",
+    "source": "https://github.com/Findus23/plugin-LanguageToogle"
+  },
+  "homepage": "https://lw1.at",
+  "license": "GPL v3+",
+  "keywords": ["language"]
+}
