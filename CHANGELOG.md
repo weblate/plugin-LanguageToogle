@@ -1,5 +1,9 @@
 ## Changelog
 
+0.1.3
+
+- update version in plugin.json
+
 0.1.2
 
 - remove placeholder docs
