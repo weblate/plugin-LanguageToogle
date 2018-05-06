@@ -22,14 +22,14 @@ class Menu extends \Piwik\Plugin\Menu
             if (empty($settings->availableLanguages->getValue())) {
                 return false;
             }
-            $languages = API::getInstance()->getAvailableLanguageNames();
-
+            $languages = [];
+            foreach (API::getInstance()->getAvailableLanguageNames() as $lang) {
+                $languages[$lang["code"]] = $lang;
+            }
             foreach ($settings->availableLanguages->getValue() as $code) {
-                foreach ($languages as $lang) {
-                    if ($lang["code"] == $code) {
-                        $additionalParams["lang"] = $code;
-                        $menu->addItem($lang["name"], null, $this->urlForDefaultAction($additionalParams), $orderId = 30);
-                    }
+                if (isset($languages[$code])) {
+                    $additionalParams["lang"] = $code;
+                    $menu->addItem($languages[$code]["name"], null, $this->urlForDefaultAction($additionalParams), $orderId = 30);
                 }
             }
         }

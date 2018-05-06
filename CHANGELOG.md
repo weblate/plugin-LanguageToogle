@@ -1,5 +1,9 @@
 ## Changelog
 
+0.1.4
+
+- performance improvements
+
 0.1.3
 
 - update version in plugin.json
