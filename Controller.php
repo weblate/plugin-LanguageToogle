@@ -17,7 +17,9 @@ class Controller extends \Piwik\Plugin\Controller
     public function index() {
         Piwik::checkUserHasSuperUserAccess();
         $lang = Common::getRequestVar("lang");
+        $returnModule = Common::getRequestVar("returnModule");
+        $returnAction = Common::getRequestVar("returnAction");
         LanguagesManager::setLanguageForSession($lang);
-        $this->redirectToIndex("CoreHome", "index");
+        $this->redirectToIndex($returnModule, $returnAction);
     }
 }

@@ -17,6 +17,7 @@ class Menu extends \Piwik\Plugin\Menu
 {
     public function configureTopMenu(MenuTop $menu) {
         if (Piwik::hasUserSuperUserAccess()) {
+            $additionalParams = ["returnModule" => Piwik::getModule(), "returnAction" => Piwik::getAction()];
             $settings = new UserSettings();
             if (empty($settings->availableLanguages->getValue())) {
                 return false;
@@ -26,7 +27,8 @@ class Menu extends \Piwik\Plugin\Menu
             foreach ($settings->availableLanguages->getValue() as $code) {
                 foreach ($languages as $lang) {
                     if ($lang["code"] == $code) {
-                        $menu->addItem($lang["name"], null, $this->urlForDefaultAction(["lang" => $code]), $orderId = 30);
+                        $additionalParams["lang"] = $code;
+                        $menu->addItem($lang["name"], null, $this->urlForDefaultAction($additionalParams), $orderId = 30);
                     }
                 }
             }
