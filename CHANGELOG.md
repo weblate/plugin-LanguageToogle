@@ -1,5 +1,9 @@
 ## Changelog
 
+0.1.2
+
+- remove placeholder docs
+
 0.1.1
 
 - Submit to marketplace
