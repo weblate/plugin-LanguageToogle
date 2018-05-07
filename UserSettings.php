@@ -8,6 +8,7 @@
 
 namespace Piwik\Plugins\LanguageToogle;
 
+use function PHPSTORM_META\type;
 use Piwik\Piwik;
 use Piwik\Plugins\LanguagesManager\API;
 use Piwik\Settings\FieldConfig;
@@ -20,20 +21,24 @@ class UserSettings extends \Piwik\Settings\Plugin\UserSettings
 
     protected function init() {
         $this->availableLanguages = $this->createAvailableLanguagesSetting();
+        if (!empty($this->availableLanguages->getValue()) && gettype($this->availableLanguages->getValue()[0]) == "string") {
+            $this->availableLanguages->setValue([]);
+        }
     }
 
-    private function createAvailableLanguagesSetting()
-    {
-        return $this->makeSetting('availableLanguages', $default = false, FieldConfig::TYPE_ARRAY, function (FieldConfig $field) {
+    private function createAvailableLanguagesSetting() {
+        return $this->makeSetting('availableLanguages', array(), FieldConfig::TYPE_ARRAY, function (FieldConfig $field) {
             $languageList = [];
             $languages = API::getInstance()->getAvailableLanguagesInfo();
             foreach ($languages as $language) {
                 $languageList[$language['code']] = $language['name'] . ' (' . $language['english_name'] . ')';
             }
             $field->title = Piwik::translate('LanguageToogle_SettingsTitle');
-            $field->inlineHelp = Piwik::translate('LanguageToogle_SelectLanguages');
-            $field->uiControl = FieldConfig::UI_CONTROL_MULTI_SELECT;
-            $field->availableValues = $languageList;
+            $field->description = Piwik::translate('LanguageToogle_Description');
+            $field->uiControl = FieldConfig::UI_CONTROL_MULTI_TUPLE;
+            $field1 = new FieldConfig\MultiPair(Piwik::translate('LanguageToogle_Language'), 'languageCode', FieldConfig::UI_CONTROL_SINGLE_SELECT);
+            $field1->availableValues = $languageList;
+            $field->uiControlAttributes['field1'] = $field1->toArray();
         });
     }
 }

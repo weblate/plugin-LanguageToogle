@@ -19,14 +19,15 @@ class Menu extends \Piwik\Plugin\Menu
         if (Piwik::hasUserSuperUserAccess()) {
             $additionalParams = ["returnModule" => Piwik::getModule(), "returnAction" => Piwik::getAction()];
             $settings = new UserSettings();
-            if (empty($settings->availableLanguages->getValue())) {
+            if (empty($settings->availableLanguages)) {
                 return false;
             }
             $languages = [];
             foreach (API::getInstance()->getAvailableLanguageNames() as $lang) {
                 $languages[$lang["code"]] = $lang;
             }
-            foreach ($settings->availableLanguages->getValue() as $code) {
+            foreach ($settings->availableLanguages->getValue() as $setting) {
+                $code=$setting["languageCode"];
                 if (isset($languages[$code])) {
                     $additionalParams["lang"] = $code;
                     $menu->addItem($languages[$code]["name"], null, $this->urlForDefaultAction($additionalParams), $orderId = 30);
@@ -34,4 +35,5 @@ class Menu extends \Piwik\Plugin\Menu
             }
         }
     }
+    
 }

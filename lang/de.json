@@ -1,6 +1,7 @@
 {
   "LanguageToogle": {
     "SettingsTitle": "Persönliche Sprachen",
-    "SelectLanguages": "Wähle die Sprachen zwischen denen gewechselt werden soll."
+    "Description": "Wähle die Sprachen zwischen denen gewechselt werden soll.",
+    "Language": "Sprache"
   }
 }
