@@ -27,13 +27,12 @@ class Menu extends \Piwik\Plugin\Menu
                 $languages[$lang["code"]] = $lang;
             }
             foreach ($settings->availableLanguages->getValue() as $setting) {
-                $code=$setting["languageCode"];
+                $code = $setting["languageCode"];
                 if (isset($languages[$code])) {
                     $additionalParams["lang"] = $code;
-                    $menu->addItem($languages[$code]["name"], null, $this->urlForDefaultAction($additionalParams), $orderId = 30);
+                    $menu->addItem(Piwik::translate("Intl_Language_" . $code), null, $this->urlForDefaultAction($additionalParams), $orderId = 35);
                 }
             }
         }
     }
-    
 }
