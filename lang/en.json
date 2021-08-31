@@ -1,7 +1,7 @@
 {
-  "LanguageToogle": {
-    "SettingsTitle": "Favorite Languages",
-    "Description": "Please choose the languages you would to toogle between.",
-    "Language": "Language"
-  }
+    "LanguageToogle": {
+        "SettingsTitle": "Favorite Languages",
+        "Description": "Please choose the languages you would to switch between.",
+        "Language": "Language"
+    }
 }
