@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Merci de choisir les langues entre lesquelles vous voulez alterner.",
+        "Language": "Langue",
+        "SettingsTitle": "Langues préférées"
+    }
+}
