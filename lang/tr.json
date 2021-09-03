@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Lütfen geçiş yapmak istediğiniz dilleri seçin.",
+        "Language": "Dil",
+        "SettingsTitle": "Sık kullanılan diller"
+    }
+}
