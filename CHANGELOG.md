@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.2
+
+Add Bulgarian, French, German, Greek, Turkish translations (thanks to the contributors in the Matomo weblate project)
+
 ### 0.3.1 (Matomo 4+ only)
 
 - use local names for languages
