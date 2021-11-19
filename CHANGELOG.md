@@ -1,5 +1,10 @@
 ## Changelog
 
+### 0.3.3
+
+add Italian, Japanese, Portuguese, Portuguese (Brazil) and Ukrainian translations
+
+
 ### 0.3.2
 
 Add Bulgarian, French, German, Greek, Turkish translations (thanks to the contributors in the Matomo weblate project)
