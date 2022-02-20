@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.4
+
+add workaround for bug in Matomo 4.7.0 and 4.7.1
+
 ### 0.3.3
 
 add Italian, Japanese, Portuguese, Portuguese (Brazil) and Ukrainian translations

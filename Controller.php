@@ -10,7 +10,9 @@ namespace Piwik\Plugins\LanguageToogle;
 
 use Piwik\Common;
 use Piwik\Piwik;
+use Piwik\Plugins\LanguagesManager\API as APILanguagesManager;
 use Piwik\Plugins\LanguagesManager\LanguagesManager;
+use Piwik\Version;
 
 class Controller extends \Piwik\Plugin\Controller
 {
@@ -19,7 +21,10 @@ class Controller extends \Piwik\Plugin\Controller
         $lang = Common::getRequestVar("lang");
         $returnModule = Common::getRequestVar("returnModule");
         $returnAction = Common::getRequestVar("returnAction");
-        LanguagesManager::setLanguageForSession($lang);
+        LanguagesManager::setLanguageForSession("");
+        if (Version::VERSION == '4.7.1' || Version::VERSION == '4.7.0') {
+            APILanguagesManager::getInstance()->setLanguageForUser(Piwik::getCurrentUserLogin(), $lang);
+        }
         $this->redirectToIndex($returnModule, $returnAction);
     }
 }
