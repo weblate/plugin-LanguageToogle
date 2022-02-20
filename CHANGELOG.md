@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.5
+
+fix typo in 0.3.4
+
 ### 0.3.4
 
 add workaround for bug in Matomo 4.7.0 and 4.7.1

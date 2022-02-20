@@ -21,7 +21,7 @@ class Controller extends \Piwik\Plugin\Controller
         $lang = Common::getRequestVar("lang");
         $returnModule = Common::getRequestVar("returnModule");
         $returnAction = Common::getRequestVar("returnAction");
-        LanguagesManager::setLanguageForSession("");
+        LanguagesManager::setLanguageForSession($lang);
         if (Version::VERSION == '4.7.1' || Version::VERSION == '4.7.0') {
             APILanguagesManager::getInstance()->setLanguageForUser(Piwik::getCurrentUserLogin(), $lang);
         }
