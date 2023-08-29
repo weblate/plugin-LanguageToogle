@@ -1,7 +1,7 @@
 {
   "name": "LanguageToogle",
   "description": "Quickly change the language of Matomo",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "theme": false,
   "require": {
     "piwik": ">=4.0.0-b1,<5.0.0-b1"

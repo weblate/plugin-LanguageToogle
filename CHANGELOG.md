@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.6
+
+hide setting from non-superusers
+
 ### 0.3.5
 
 fix typo in 0.3.4
