@@ -20,6 +20,9 @@ class UserSettings extends \Piwik\Settings\Plugin\UserSettings
     public $availableLanguages;
 
     protected function init() {
+        if (Piwik::hasUserSuperUserAccess()) {
+            return;
+        }
         $this->availableLanguages = $this->createAvailableLanguagesSetting();
         if (!empty($this->availableLanguages->getValue()) && gettype($this->availableLanguages->getValue()[0]) == "string") {
             $this->availableLanguages->setValue([]);
