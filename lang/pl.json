@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Proszę wybrać języki, między którymi chcesz się przełączać.",
+        "Language": "Język",
+        "SettingsTitle": "Ulubione języki"
+    }
+}
