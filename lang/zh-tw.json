@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "請選擇想要切換的語言。",
+        "Language": "語言",
+        "SettingsTitle": "喜愛的語言"
+    }
+}
