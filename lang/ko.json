@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "전환할 언어를 선택하십시오.",
+        "Language": "언어",
+        "SettingsTitle": "좋아하는 언어"
+    }
+}
