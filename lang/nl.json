@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Kies de talen waartussen u wilt schakelen.",
+        "Language": "Taal",
+        "SettingsTitle": "Favoriete talen"
+    }
+}
