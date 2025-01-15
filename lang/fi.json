@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Valitse kielet, joiden välillä haluat vaihtaa.",
+        "Language": "Kieli",
+        "SettingsTitle": "Suosikkikielet"
+    }
+}
