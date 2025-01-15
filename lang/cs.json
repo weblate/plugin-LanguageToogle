@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Vyberte jazyky, mezi kterými chcete přepínat.",
+        "Language": "Jazyk",
+        "SettingsTitle": "Oblíbené jazyky"
+    }
+}
