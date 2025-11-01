@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Lūdzu, izvēlieties valodas, starp kurām vēlaties pārslēgties.",
+        "Language": "Valoda",
+        "SettingsTitle": "Iecienītās valodas"
+    }
+}
