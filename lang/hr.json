@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Odaberi jezike između kojih želiš prebacivati.",
+        "Language": "Jezik",
+        "SettingsTitle": "Osobni jezici"
+    }
+}
