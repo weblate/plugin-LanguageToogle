@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Velg språkene du ønsker å bytte mellom.",
+        "Language": "Språk",
+        "SettingsTitle": "Favorittspråk"
+    }
+}
