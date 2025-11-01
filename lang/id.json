@@ -1,1 +1,7 @@
-{}
+{
+    "LanguageToogle": {
+        "Description": "Silakan pilih bahasa yang ingin Anda alihkan.",
+        "Language": "Bahasa",
+        "SettingsTitle": "Bahasa Favorit"
+    }
+}
